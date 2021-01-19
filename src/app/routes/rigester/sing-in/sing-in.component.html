@@ -1,0 +1,109 @@
+<app-mega-menu></app-mega-menu>
+
+<div id="rtl" class="container register">
+    <div class="row">
+        <!-- Right Side Title -->
+        <div class="col-12 col-md-3 register-right">
+            <input type="button" routerLink="/main" routerLinkActive="active" value="ورود به سایت"/><br/>
+        </div>
+        <!-- Left Side Forms -->
+        <div class="col-12 col-md-9">
+            <div class="register-left p-3">
+                <!-- /Tabs Nav-bar -->
+                <div class="tab-content" id="myTabContent">
+                    <!-- Tab 1 -->
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="register-heading">
+                          <h3>ثبت نام مشتری</h3>
+                          <p>{{ massage }}</p>
+                        </div>
+                        <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+                            <div class="row register-form mx-auto">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group md-form">
+                                        <input type="text" mdbInput mdbValidate ngModel
+                                          #name="ngModel" class="form-control" placeholder="* نام"
+                                          name="name" required minlength="3" />
+                                        <mdb-error *ngIf="name.invalid && (name.dirty || name.touched)">لطفا نام خود را وارد کنید</mdb-error>
+                                        <mdb-success *ngIf="name.valid && (name.dirty || name.touched)">نام مورد تایید است</mdb-success>
+                                    </div>
+                                    <div class="form-group md-form">
+                                        <input type="text" mdbInput mdbValidate ngModel
+                                         #family="ngModel" class="form-control" placeholder="* نام خانوادگی"
+                                         name="family" required  minlength="3" />
+                                        <mdb-error *ngIf="family.invalid && (family.dirty || family.touched)">لطفا نام خانوادگی خود را وارد کنید</mdb-error>
+                                        <mdb-success *ngIf="family.valid && (family.dirty || family.touched)">نام خانوادگی مورد تایید است</mdb-success>
+                                    </div>
+                                    <div class="form-group md-form">
+                                        <input type="password" mdbInput mdbValidate ngModel
+                                          #password="ngModel" class="form-control" placeholder="رمز عبور *"
+                                          name="password" required minlength="8" />
+                                        <mdb-error *ngIf="password.invalid && (password.dirty || password.touched)">پسورد باید 8 رقم یا بیشتر باشد</mdb-error>
+                                        <mdb-success *ngIf="password.valid && (password.dirty || password.touched)">پسورد مورد تایید است</mdb-success>
+                                    </div>
+                                    <div class="form-group md-form">
+                                        <input type="password" mdbInput mdbValidate ngModel
+                                          #password2="ngModel" class="form-control"  placeholder="تکرار رمز عبور *"
+                                          name="password2" required  minlength="8" />
+                                        <mdb-error *ngIf="password2.invalid && (password2.dirty || password2.touched);">پسورد باید 8 رقم یا بیشتر باشد</mdb-error>
+                                        <mdb-success *ngIf="password2.valid && (password2.dirty || password2.touched)">پسورد مورد تایید است</mdb-success>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="مرد" checked>
+                                                <span> مرد </span>
+                                            </label>
+                                            <label class="radio inline">
+                                                <input type="radio" name="gender" value="زن">
+                                                <span>زن </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group md-form">
+                                        <input type="email" mdbInput mdbValidate ngModel
+                                         #email="ngModel" class="form-control" placeholder="پست الکترونیک *"
+                                          name="email" required pattern="[^ @]*@[^ @]*[.com]" />
+                                        <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)">لطفا ایمیل خود را وارد کنید</mdb-error>
+                                        <mdb-success *ngIf="email.valid && (email.dirty || email.touched)">ایمیل مورد تایید است</mdb-success>
+                                    </div>
+                                    <div class="form-group md-form">
+                                        <input type="text" mdbInput mdbValidate ngModel
+                                         #tell="ngModel" minlength="10" maxlength="10" required
+                                          name="txtEmpPhone" class="form-control" placeholder="* تلفن تماس(مثال:9110124321)" name="tell" />
+                                          <mdb-error *ngIf="tell.invalid && (tell.dirty || tell.touched)">لطفا تلفن تماس خود را وارد کنید</mdb-error>
+                                          <mdb-success *ngIf="tell.valid && (tell.dirty || tell.touched)">تلفن تماس مورد تایید است</mdb-success>
+                                    </div>
+                                    <div class="form-group md-form">
+                                        <select class="form-control">
+                                            <option class="hidden"  selected disabled>سوال امنیتی را انتخاب کنید</option>
+                                            <option>در چه ماهی متولد شده اید؟</option>
+                                            <option>برند تلفن همراه شما چیست؟</option>
+                                            <option>نام نخستین عمویتان چیست؟</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group md-form">
+                                        <input type="text" mdbInput mdbValidate ngModel
+                                         #title="ngModel" class="form-control" placeholder="* پاسخ را وارد کنید"
+                                          name="title" minlength="3" required />
+                                        <mdb-error *ngIf="title.invalid && (title.dirty || title.touched)">لطفا پاسخ خود را وارد کنید</mdb-error>
+                                        <mdb-success *ngIf="title.valid && (title.dirty || title.touched)">پاسخ مورد تایید است</mdb-success>
+                                    </div>
+                                    <input type="submit" class="btnRegister" value="عضویت"/>
+                                </div>
+
+                                <br/>
+                                <a routerLink="/sing-up" routerLinkActive="active">قبلا ثبت نام کردید؟</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<app-footer></app-footer>

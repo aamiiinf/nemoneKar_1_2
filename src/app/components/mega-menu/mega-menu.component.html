@@ -1,0 +1,633 @@
+<div id="div-1">
+  <div id="mySidenav" class="sidenav p-2">
+    <div>
+      <a id="link_1" href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    </div>
+    <div class="div-11">
+      <form class="form-inline waves-light" mdbWavesEffect>
+        <div class="md-form mt-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="...جستجو">
+        </div>
+      </form>
+    </div>
+
+    <div class="dropdown">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+        مصالح ساختمانی پایه
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">اجر و سفال</a>
+        <a class="dropdown-item" href="#">مصالح پودری و دانه ای</a>
+        <a class="dropdown-item" href="#">انواع چسب ساختمانی و ملات خشک و آماده</a>
+        <a class="dropdown-item" href="#">فراورده های بتنی و ملزومات</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+        تاسیسات آب و فاضلاب و گاز
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">لوازم و تجهیزات بهداشتی</a>
+        <a class="dropdown-item" href="#">شیر آلات</a>
+        <a class="dropdown-item" href="#">گرمایشی ,سرمایشی و تههویه هوا</a>
+        <a class="dropdown-item" href="#">لوازم و تجهیزات</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+        دکوراسیون داخلی و نازک کاری
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">نرده , درب و پنجره</a>
+        <a class="dropdown-item" href="#">سرامیک و کف پوش</a>
+        <a class="dropdown-item" href="#">کناف و سقف </a>
+        <a class="dropdown-item" href="#">کاشی و دیوار پوش</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+        تجهیزات فضای باز و نما
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">محوطه سازی و نور پردازی</a>
+        <a class="dropdown-item" href="#">آبنما و استخر</a>
+        <a class="dropdown-item" href="#">نیمکت و آلاچیق</a>
+      </div>
+    </div>
+    <a href="#">درباره ما</a>
+    <a href="#">تماس با ما</a>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div>
+      <img class="img m-2" src="./assets/Logo1.png" alt="notFound">
+    </div>
+    <div class="sing text-right text-white">
+  </div>
+    <div class="div-style" (click)="openNav()">&#9776;</div>
+  </div>
+</div>
+<div class="sing2">
+  <div class="d-flex">
+    <div class="mr-auto">
+      <button mdbBtn type="button" color="pink" size="sm" mdbWavesEffect>
+        <span class="badge badge-light">0</span>
+        <span style="font-size:12px;" class="px-2">سبد خرید</span>
+        <mdb-icon fas icon="shopping-basket"></mdb-icon>
+      </button>
+    </div>
+    <div class="px-2">
+      <a style="font-size: 12px;font-family: tahoma;"
+          routerLink="/sing-in"
+          routerLinkActive="active"
+          class="text-white text_color">
+        <span>عضویت</span>
+        <mdb-icon class="pl-1" fas icon="unlock"></mdb-icon>
+      </a>
+    </div>
+    <div>
+      <a style="font-size: 12px;font-family: tahoma;"
+          routerLink="/sing-up"
+          routerLinkActive="active"
+          class="text-white text_color">
+        <span>ورود</span>
+        <mdb-icon class="px-1" fas icon="sign-in-alt"></mdb-icon>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 dis_n">
+
+    <div class="row top-1">
+        <div class="a-link col-sm-4 text-left">
+          <a class="text_color" style="font-size: 12px;" href="#" data-toggle="modal" data-target="#myModal">درباره ما</a>
+          <span class="px-2">|</span>
+          <a class="text_color pl-2" style="font-size: 12px;" href="#">تماس با ما</a>
+          <br>
+          <div>
+            <button mdbBtn type="button" color="pink" size="sm" mdbWavesEffect>
+              <span class="badge badge-light">0</span>
+              <span style="font-size:12px;" class="px-2">سبد خرید</span>
+              <mdb-icon fas icon="shopping-basket"></mdb-icon>
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-4 rtl">
+            <form style="text-align:center">
+                <input class="mt-2 input" type="text" name="search" placeholder="جستجو ...">
+            </form>
+        </div>
+        <div class="col-sm-4 text-right">
+            <img class="img pt-1" src="../../../assets/Logo1.png" alt="notFound">
+        </div>
+    </div>
+</div>
+
+<div class="dis_n" [class.fixed]="isTrue">
+  <nav>
+  <ul id="main_menu">
+      <li class="main_list"><a href="">مصالح ساختمانی پایه<i class="icon"></i></a>
+          <ul>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>آجر و سفال</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">سفال</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر نسوز</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر قزاقی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر کف نما وپوشش های نما</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر نما</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر کف</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر فشاری و لفتون</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پوشش های آب گریز نانو</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر ده سوراخ</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آجر فشاری</li>
+                  </a>
+              </ol>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>مصالح پودری و دانه ای</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">انواع سیمان</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">گچ</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پودر سنگ</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پوکه</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">ماسه</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پرلیت</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">انواع شن</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آهک</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">خاک رس</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">خاک نسوز</li>
+                  </a>
+              </ol>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>انواع چسب ساختمانی و ملات خشک و آمده</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">چسب کاشی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">چسب بتن</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پودر بندکشی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">چسب کاشت میل گرد</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">چسب سنگ</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">انواع بتونه و ماستیک</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">گروت</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پلاستر</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">ملات</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">چسب پارکت</li>
+                  </a>
+              </ol>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>فراورده های بتنی و ملزومات</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">روان کننده بتن</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">ضدیخ</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">ترمیم کننده بتن</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">میکرو سیلیس پودری</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">هواساز بتن</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">الیاف بتن</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">رنگ بتن</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">موادآب بندی و تحکیم</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">مواد آب بنند کننده بتن</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">زودگیر کننده بتن</li>
+                  </a>
+              </ol>
+          </ul>
+      </li>
+    <li class="main_list"><a href="">تاسیسات آب و فاضلاب و گاز<i class="icon"></i></a>
+      <ul>
+          <ol>
+              <a class="mmmk" href="">
+                  <li>لوازم و تجهیزات بهداشتی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">توالت فرنگی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">توالت زمینی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">روشویی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">فلاش تانک</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">ست سرویس بهداشتی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">وان</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">زیر دوشی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">کابین دوش</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">جکوزی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">کابین سونا</li>
+              </a>
+          </ol>
+          <ol>
+              <a class="mmmk" href="">
+                  <li>شیر آلات</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شیرآلات ساختمانی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شیر توالت</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شیر حمام و دوش</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شیر ظرف شویی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شیر روشویی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شیرآلات صنعتی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">تجهیزات شیر آلات</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">سیفون زیر سینک</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">شلنگ</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">سر شیر</li>
+              </a>
+          </ol>
+          <ol>
+            <a class="mmmk" href="">
+                <li>گرمایشی و سرمایشی و تهویه</li>
+            </a>
+            <a href="">
+                <li class="main_list2">هواساز</li>
+            </a>
+            <a href="">
+                <li class="main_list2">آبگرمکن</li>
+            </a>
+            <a href="">
+                <li class="main_list2">رادیاتور</li>
+            </a>
+            <a href="">
+                <li class="main_list2">پکیج</li>
+            </a>
+            <a href="">
+                <li class="main_list2">چیلر</li>
+            </a>
+            <a href="">
+                <li class="main_list2">دیگ</li>
+            </a>
+            <a href="">
+                <li class="main_list2">مشعل</li>
+            </a>
+            <a href="">
+                <li class="main_list2">کولر آبی</li>
+            </a>
+            <a href="">
+                <li class="main_list2">کولرگازی و اسپلیت</li>
+            </a>
+            <a href="">
+                <li class="main_list2">هواکش</li>
+            </a>
+        </ol>
+        <ol>
+          <a class="mmmk" href="">
+              <li>لوله و تجهیزات</li>
+          </a>
+          <a href="">
+              <li class="main_list2">لوله آب</li>
+          </a>
+          <a href="">
+              <li class="main_list2">لوله فاضلاب</li>
+          </a>
+          <a href="">
+              <li class="main_list2">لوله گاز</li>
+          </a>
+          <a href="">
+              <li class="main_list2">اتصالات آب</li>
+          </a>
+          <a href="">
+              <li class="main_list2">اتصالات گاز</li>
+          </a>
+          <a href="">
+              <li class="main_list2">پمپ</li>
+          </a>
+          <a href="">
+              <li class="main_list2">دریچه منهول</li>
+          </a>
+      </ol>
+      </ul>
+    </li>
+      <li class="main_list"><a href="">دکوراسیون داخلی و نازک کاری<i class="icon"></i></a>
+          <ul>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>نرده , درب و پنجره</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">درب های فلزی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">درب پارکینگ</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">درب ورودی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">درب انبار</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">درب ضد سرقت</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پنجره</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">درب کمدی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">نرده</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">کرکره</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">انواع شیشه</li>
+                  </a>
+              </ol>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>سرامیک و کف پوش</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">کف کاشی</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">موزاییک</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">سنگ</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پارکت</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">کف پوش</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">لمینت</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">قرنیز</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">پله</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">موکت</li>
+                  </a>
+                  <a href="">
+                    <li class="main_list2">پرده عمودی</li>
+                </a>
+              </ol>
+              <ol>
+                <a class="mmmk" href="">
+                    <li>کناف و سقف</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">کناف</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">پانل روکش دار گچی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">تایل</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">سازه</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">گچ بری</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">سقف</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">سقف کاذب</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">تزیینات سقف</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">رابیتس</li>
+                </a>
+                <a href="">
+                  <li class="main_list2">کنتکس</li>
+              </a>
+            </ol>
+            <ol>
+              <a class="mmmk" href="">
+                  <li>کاشی و دیوار پوش</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">کاشی دیوار</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">کاغذ دیواری</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">رنگ</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">رنگ های ساختمانی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">دیوار پوش</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">پوستر دیواری</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">استیکر دیواری</li>
+              </a>
+          </ol>
+          </ul>
+      </li>
+      <li class="main_list"><a href="">تجهیزات فضای باز و نما<i class="icon"></i></a>
+        <ul>
+            <ol>
+                <a class="mmmk" href="">
+                    <li>محوطه سازی و نور پردازی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">انواع لامپ و روشنایی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">چمن مصنوعی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">نرده سنگی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">مجسمه</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">حفاظ و نرده</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">تجهیزات ورزشی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">مبلمان شهری</li>
+                </a>
+            </ol>
+            <ol>
+                <a class="mmmk" href="">
+                    <li>آبنما و استخر</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">تجهیزات استخر</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">پمپ تصفیه</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">پکیج تصفیه</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">هیتر آب استخر</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">آبنما</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">آبشار مصنوعی</li>
+                </a>
+                <a href="">
+                    <li class="main_list2">تصفیه با قدرت</li>
+                </a>
+            </ol>
+            <ol>
+              <a class="mmmk" href="">
+                  <li>نیمکت و آلاچیق</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">نیمکت چوبی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">نیمکت فلزی</li>
+              </a>
+              <a href="">
+                  <li class="main_list2">انواع آلاچیق</li>
+              </a>
+            </ol>
+        </ul>
+    </li>
+      <li class="main_list_2 px-4">
+          <a style="font-size: 12px;font-family: tahoma;"
+              routerLink="/sing-in"
+              routerLinkActive="active"
+              class="text-white text_color">
+            <span>عضویت</span>
+            <mdb-icon class="pl-1" fas icon="unlock"></mdb-icon>
+          </a>
+      </li>
+      <li class="main_list_2">
+          <a style="font-size: 12px;font-family: tahoma;"
+              routerLink="/sing-up"
+              routerLinkActive="active"
+              class="text-white text_color">
+            <span>ورود</span>
+            <mdb-icon class="px-1" fas icon="sign-in-alt"></mdb-icon>
+          </a>
+      </li>
+  </ul>
+  </nav>
+</div>
