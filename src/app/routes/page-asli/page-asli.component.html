@@ -1,3 +1,4 @@
+<div #target></div>
 <app-mega-menu></app-mega-menu>
 <app-slider></app-slider>
 <app-main-top></app-main-top>
@@ -5,4 +6,7 @@
 <app-main></app-main>
 <app-main-one></app-main-one>
 <app-main-features></app-main-features>
+<a class="top" (click)="Up(target)" [class.fixed]="isTrue">
+  <mdb-icon class="icon-up icon" fas icon="angle-double-up"></mdb-icon>
+</a>
 <app-footer></app-footer>
