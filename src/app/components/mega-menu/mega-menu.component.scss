@@ -41,7 +41,7 @@
 .text_color:hover{
     color:#ffb400 !important;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 720.5px) {
     .dis_n{
         display: none;
     }
@@ -144,7 +144,7 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-  @media screen and (min-width: 680px) {
+  @media screen and (min-width: 720.5px) {
       #div-1{
           display: none;
       }
@@ -153,13 +153,13 @@
     height: 60px;
     width: 100px;
   }
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 720.5px) {
     .img{
       width: 50px;
       height: 30px;
     }
   }
-  @media screen and (min-width: 680px) {
+  @media screen and (min-width: 720.5px) {
     .sing2{
       display: none;
     }
